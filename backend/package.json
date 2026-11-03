@@ -7,9 +7,9 @@
     "start": "node index.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Shweta Sindhu",
   "license": "ISC",
-  "description": "",
+  "description": "Backend for the version control system",
   "dependencies": {
     "yargs": "^18.1.0"
   }

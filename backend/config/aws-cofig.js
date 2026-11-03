@@ -1,0 +1,1 @@
+//here we are going tp do config of aws : how to connect to aws and how to upload files to aws s3 bucket
