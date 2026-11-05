@@ -43,7 +43,9 @@ yargs(hideBin(process.argv))
                 type:"string",
             })
         }, 
-        commitRepo)
+        (argv)=>{
+            commitRepo(argv.message)
+        })
     .command(
         "pull", 
         "Pull commits from S3",
