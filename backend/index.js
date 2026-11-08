@@ -13,6 +13,7 @@ const {revertReq}=require("./controllers/revert.js");
 //use yargs: to read and detect the command (hidebin to read the parameters of commands)
 //and attach all commands via  chaining
 yargs(hideBin(process.argv))
+    .command("start", "Start the application", {}, startApp)
     .command(
         'init',  //command with format
         "Initialize a new repository",//Cmnd's description 
@@ -70,3 +71,7 @@ yargs(hideBin(process.argv))
             revertReq(argv.commitID);
         })
     .demandCommand(1, "You need atleast one command").help().argv;
+    
+    function startApp(){
+        console.log(" Welcome to the Version Control System !!");
+    }

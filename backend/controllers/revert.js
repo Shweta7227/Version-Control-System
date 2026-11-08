@@ -5,8 +5,8 @@ const {promisify} = require('util');
 
 const readdir = promisify(fs.readdir);
 const copyFile = promisify(fs.copyFile);
-console.log("readDir", readdir);
-console.log("copyFile", copyFile);
+// console.log("readDir", readdir);
+// console.log("copyFile", copyFile);
 async function revertReq(commitID){
     const repoPath = path.resolve(process.cwd(), ".myGit");
     const commitsPath = path.join(repoPath, "commits");

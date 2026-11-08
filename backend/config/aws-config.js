@@ -3,12 +3,12 @@ const dotenv = require("dotenv");
 const path = require("path");
 
 const envPath = path.resolve(__dirname, "../.env");
-console.log("Expected env path:", envPath);
+// console.log("Expected env path:", envPath);
 const result = dotenv.config({
     path: envPath
 });
 
-console.log("Dotenv result:", result.error || "File loaded successfully");
+// console.log("Dotenv result:", result.error || "File loaded successfully");
 const { S3Client } = require("@aws-sdk/client-s3");
 
 
@@ -22,13 +22,13 @@ const s3Client = new S3Client({
 });
 
 const S3_BUCKET = process.env.B2_BUCKET_NAME;
-console.log("========== B2 DEBUG ==========");
+// console.log("========== B2 DEBUG ==========");
 
-console.log("B2_ENDPOINT:", process.env.B2_ENDPOINT);
-console.log("B2_REGION:", process.env.B2_REGION);
-console.log("B2_BUCKET_NAME:", process.env.B2_BUCKET_NAME);
+// console.log("B2_ENDPOINT:", process.env.B2_ENDPOINT);
+// console.log("B2_REGION:", process.env.B2_REGION);
+// console.log("B2_BUCKET_NAME:", process.env.B2_BUCKET_NAME);
 
-console.log("Region type:", typeof process.env.B2_REGION);
+// console.log("Region type:", typeof process.env.B2_REGION);
 
-console.log("==============================");
+// console.log("==============================");
 module.exports = { s3Client, S3_BUCKET };
